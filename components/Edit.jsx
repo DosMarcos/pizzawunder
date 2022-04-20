@@ -25,7 +25,7 @@ const Edit = ({ setClose, param }) => {
     // function runs once if component is loaded
     useEffect(() => {            
         const axiosFetch = async () => {
-            const response = await axios.get("http://localhost:3000/api/products/" + param);
+            const response = await axios.get("/api/products/" + param);
 
             const data = response.data;
             setOldTitle(data.title);
@@ -106,7 +106,7 @@ const Edit = ({ setClose, param }) => {
             }
             console.log(newProduct);
 
-            await axios.post("http://localhost:3000/api/products", newProduct);
+            await axios.post("/api/products", newProduct);
             setClose(true);
             Router.reload(window.location.pathname)
         }
