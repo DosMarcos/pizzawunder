@@ -42,7 +42,7 @@ const Cart = () => {
     else {
       setVisible(true);
     }
-  });
+  }),[];
 
   // Custom component to wrap the PayPalButtons and handle currency changes
   const ButtonWrapper = ({ currency, showSpinner }) => {
