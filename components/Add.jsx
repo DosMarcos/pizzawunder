@@ -56,7 +56,7 @@ const Add = ({ setClose }) => {
         img: url,
       };
 
-      await axios.post("/api/products", newProduct);
+      await axios.post("https://pizzawunder.vercel.app/api/products", newProduct);
       setClose(true);
       Router.reload(window.location.pathname)
     } catch (err) {

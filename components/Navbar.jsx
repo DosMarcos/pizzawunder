@@ -22,23 +22,23 @@ const Navbar = () => {
       </div>
       <div className={styles.item}>
         <ul className={styles.list}>
-          <Link href="/#Featured" passHref>
+          <Link href="https://pizzawunder.vercel.app/#Featured" passHref>
             <li className={styles.listItem}>Homepage</li>
           </Link>
-          <Link href="/#PizzaList" passHref>
+          <Link href="https://pizzawunder.vercel.app/#PizzaList" passHref>
           <li className={styles.listItem}>Pizza Sortiment</li>
           </Link>  
-          <Link href="/#Footer" passHref>
+          <Link href="https://pizzawunder.vercel.app/#Footer" passHref>
           <li className={styles.listItem}>Niederlassungen</li>
           </Link>          
-          <Link href="/admin" passHref>
+          <Link href="https://pizzawunder.vercel.app/admin" passHref>
           <li className={styles.listItem}>Admin</li>
           </Link>  
           <Image src="/img/logo.png" alt="" width="160px" height="69px" />                           
         </ul>
       </div>
 
-      <Link href="/cart" passHref>
+      <Link href="https://pizzawunder.vercel.app/cart" passHref>
         <div className={styles.item}>
         <p className={styles.list}>Warenkorb</p>
           <div className={styles.cart}>            

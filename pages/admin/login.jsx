@@ -15,11 +15,11 @@ const Login = () => {
 
   const handleClick = async () => {
     try {
-      await axios.post("/api/login", {
+      await axios.post("https://pizzawunder.vercel.app/api/login", {
         username,
         password,
       });
-      router.push("/admin");
+      router.push("https://pizzawunder.vercel.app/admin");
     } catch (err) {
       setError(true);
     }

@@ -18,7 +18,7 @@ function Index({ orders, products }) {
     console.log(id);
     try {
       const res = await axios.delete(
-        "/api/products/" + id
+        "https://pizzawunder.vercel.app/api/products/" + id
       );
       setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
     } catch (err) {
@@ -32,7 +32,7 @@ function Index({ orders, products }) {
     const currentStatus = item.status;
 
     try {
-      const res = await axios.put("/api/orders/" + id, {
+      const res = await axios.put("https://pizzawunder.vercel.app/api/orders/" + id, {
         status: currentStatus + 1,
       });
       setOrderList([
@@ -136,14 +136,14 @@ export const getServerSideProps = async (ctx) => {
   if (myCookie.token !== process.env.TOKEN) {
     return {
       redirect: {
-        destination: "/admin/login",
+        destination: "https://pizzawunder.vercel.app/admin/login",
         permanent: false,
       },
     };
   }
 
-  const productRes = await axios.get("/api/products");
-  const orderRes = await axios.get("/api/orders");
+  const productRes = await axios.get("https://pizzawunder.vercel.app/api/products");
+  const orderRes = await axios.get("https://pizzawunder.vercel.app/api/orders");
 
   return {
     props: {
